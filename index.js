@@ -3,20 +3,18 @@ const s = document.querySelector(".surname");
 const e = document.querySelector(".email");
 const sub = document.querySelector(".btn");
 
-const api_key ="UxVG1oTRq4R6CVcrwkuG9PjV72aV7u6o";
-
-
 sub.addEventListener('click', function() {
     console.log("hehe");
 
     var myHeaders = new Headers();
-    myHeaders.append("apikey", "UxVG1oTRq4R6CVcrwkuG9PjV72aV7u6o");
+    myHeaders.append("apikey", "idy5htn2NpBxgh5DGrcSHF4SOGwoAGhZ");
 
     var requestOptions = {
-        method: 'GET',
-        redirect: 'follow',
-        headers: myHeaders
+    method: 'GET',
+    redirect: 'follow',
+    headers: myHeaders
     };
+
     if(e.value !== "") {
         fetch("https://api.apilayer.com/email_verification/check?email="+e.value, requestOptions)
     .then(response => response.text())
@@ -36,6 +34,9 @@ sub.addEventListener('click', function() {
     }
     
 })
+
+
+
 
 
 
